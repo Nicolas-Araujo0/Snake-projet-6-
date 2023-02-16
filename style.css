@@ -1,0 +1,107 @@
+body {
+    background-color: black;
+    background-image: url(https://images4.alphacoders.com/113/thumb-1920-113596.jpg);
+}
+
+h2 {
+    position: absolute;
+    top: 0;
+    left: 45%;
+    color: white;
+}
+
+main {
+    width: 550px;
+    height: 550px;
+    margin: 10% 35%;
+
+}
+button{
+    position: absolute;
+    top: 85%;
+    left: 47%;
+    width: 150px;
+    height: 50px;
+}
+aside {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    background-color: rgb(170, 169, 169);
+    height: 420px;
+    width: 400px;
+    text-align: center;
+    font-size: 25px;
+}
+
+#board {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    background-color: rgba(245, 245, 245, 0.900);
+    border: 1px solid black;
+}
+
+div>div {
+    box-sizing: border-box;
+}
+
+.snake {
+    border-radius: 50%;
+    background-image: url(./assets/body.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tourne {
+    background-image: url(./assets/tourne.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotateZ(0deg);
+}
+
+.tail {
+    background-image: url(./assets/tail.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.head {
+    background-image: url(./assets/head.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.apple {
+    border-radius: 50%;
+    background-image: url(./assets/pomme.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mouse {
+    background-image: url(https://www.clipartmax.com/png/full/120-1206536_brown-mouse-clip-art-transparent-background-rat-gif.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.snakeDeath{
+    opacity: 0;
+    animation: despawn 1s linear ;
+}
+@keyframes despawn{
+    from{
+        transform: scale(1);
+        opacity: 1;
+        background-image: url(https://img1.picmix.com/output/stamp/normal/7/1/8/4/1944817_4359e.gif);
+    }
+    80%{
+        transform: scale(2);
+        opacity: 1;
+        background-image: url(https://img1.picmix.com/output/stamp/normal/7/1/8/4/1944817_4359e.gif);
+    }
+    to{
+        transform: scale(0);    
+    }
+}
