@@ -378,8 +378,8 @@ function highScore() {
         let aside = document.querySelector("aside");
         let div = document.createElement("div");
         let currDate = new Date();
-        let lastPlayer = "( "+currDate.getHours() + "h : " + currDate.getMinutes() + " min )";
-        div.textContent =lastPlayer + " score : " + score;
+        let lastPlayer = currDate.getHours() + "h" + currDate.getMinutes();
+        div.textContent =lastPlayer + " : " + score + "pts";
         aside.append(div)
         player++;
         highScoreShown = true;
